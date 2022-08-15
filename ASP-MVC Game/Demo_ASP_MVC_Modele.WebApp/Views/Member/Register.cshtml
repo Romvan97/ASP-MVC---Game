@@ -1,0 +1,57 @@
+﻿@model Demo_ASP_MVC_Modele.WebApp.Models.MemberRegForm
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+@*Affichage de l'erreur le login existe déjà / L'email existe déjà*@
+@{
+    if(!string.IsNullOrEmpty(ViewData["error"]?.ToString()))
+    {
+        <h4 class="text-danger">@((string)ViewData["error"])</h4>
+    }
+}
+
+
+<h4>Création de votre compte</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Pseudo" class="control-label mb-2"></label>
+                <input asp-for="Pseudo" class="form-control" />
+                <span asp-validation-for="Pseudo" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="control-label mb-2"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Pwd" class="control-label mb-2"></label>
+                <input asp-for="Pwd" class="form-control" />
+                <span asp-validation-for="Pwd" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="PwdRepeat" class="control-label mb-2"></label>
+                <input asp-for="PwdRepeat" class="form-control" />
+                <span asp-validation-for="PwdRepeat" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Create" class="btn btn-primary mb-2" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Game" asp-action="Index" class="btn btn-primary">Retour à la liste</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

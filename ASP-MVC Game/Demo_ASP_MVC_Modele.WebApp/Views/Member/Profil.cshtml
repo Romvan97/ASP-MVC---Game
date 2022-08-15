@@ -1,0 +1,95 @@
+﻿@model Demo_ASP_MVC_Modele.WebApp.Models.MemberProfilView
+
+@{
+    ViewData["Title"] = "Profil";
+}
+
+<h1>Données du compte</h1>
+
+<div>
+    <h4>Mon Profil</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pseudo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pseudo)
+        </dd>
+    </dl>
+</div>
+
+
+<div>
+    <h4>Jeux Favoris</h4>
+    <hr />
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nom
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Min de joueurs
+            </th>
+            <th>
+                Max de joueurs
+            </th>
+            <th>
+                Age minimum
+            </th>
+            <th>
+                Coopératif
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.FavoriteList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NbPlayerMin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NbPlayerMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsCoop)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+
+<div>
+  <a class="btn btn-primary" asp-controller="Game" asp-action="AddFav" >Ajouter un favori</a>
+    <a class="btn btn-primary" asp-controller="Game" asp-action="Index" >Retourner à la liste</a>
+</div>

@@ -1,0 +1,45 @@
+﻿@model Demo_ASP_MVC_Modele.WebApp.Models.MemberLoginForm
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h4>Login</h4>
+<hr />
+
+
+@if(ViewData["error"] is not null)
+{
+   <p class="text-danger mb-3">@(ViewData["error"])</p> 
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Pseudo" class="control-label mb-2"></label>
+                <input asp-for="Pseudo" class="form-control" />
+                <span asp-validation-for="Pseudo" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Pwd" class="control-label mb-2"></label>
+                <input asp-for="Pwd" class="form-control" />
+                <span asp-validation-for="Pwd" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+    <a asp-controller="Game" asp-action="Index" class="btn btn-primary">Retour à la liste</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

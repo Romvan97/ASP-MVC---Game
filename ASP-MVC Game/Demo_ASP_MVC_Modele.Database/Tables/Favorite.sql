@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Favorite]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	IdGame INT NOT NULL,
+	IdMember INT NOT NULL
+
+	CONSTRAINT FK_Game_Favorite FOREIGN KEY (IdGame) REFERENCES Game(Id),
+	CONSTRAINT FK_Member_Favorite FOREIGN KEY (IdMember) REFERENCES Member(Id),
+	CONSTRAINT UK_Favorite UNIQUE (IdGame, IdMember)
+)

@@ -1,0 +1,10 @@
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\bin\Debug\Demo_ASP_MVC_Modele.Database.dacpac
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\bin\Debug\Demo_ASP_MVC_Modele.Database.dll
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\bin\Debug\Demo_ASP_MVC_Modele.Database.pdb
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\obj\Debug\Demo_ASP_MVC_Modele.Database.sqlproj.AssemblyReference.cache
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\obj\Debug\Model.xml
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\obj\Debug\refactor.xml
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\obj\Debug\postdeploy.sql
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\obj\Debug\predeploy.sql
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\obj\Debug\Demo_ASP_MVC_Modele.Database.dll
+C:\Users\vanmo\Desktop\Pour github\ASP-MVC\Demo_ASP_MVC_Modele.Database\obj\Debug\Demo_ASP_MVC_Modele.Database.pdb
